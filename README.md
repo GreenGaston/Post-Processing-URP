@@ -23,8 +23,8 @@ i use materials to get the shaders into the rendering passes, and im pretty sure
 currently all enum types from Acerolas code are represented as Clamped integers as i couldn't find a way to represent enums in Volumes
 ## so many passes
 all passes are currently being put in the pipeline in CustomPostProcessRenderer but it looks kinda stupid
-##hard to order effects
-Currently it is annoying to switch the ordering of postprocessing effects as you can only append them in volumes
+## hard to order effects
+Currently it is annoying to switch the ordering of postprocessing effects as you can only append them in volumes and i can't put URP post processors after the custom onees
 ## variables always start at minimal
 Clamped variables are always set to their minimal values because otherwise they break
 ## general unclean code
