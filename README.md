@@ -12,6 +12,8 @@ I used this guide:https://www.febucci.com/2022/05/custom-post-processing-in-urp/
 The base project is the unity first person package, when you open the project please go to scenes and open the playground scenario. All added Files are in the "Better Shaders" folder
 There is a Volume in the scene called Global Volume, When clicked you can Add overides in the inspecter. you will have 2 branches: "Custom" and "Post-Processing" Custom contains the shaders from Acerola and post-processing will contain the default post-processing effects provided by unity
 
+If you want to apply these effects to your own project you will have to include CustomPostProcessRenderer in your URPfile
+
 currently it is set as a Global volume but you can make it a localised effect by setting its mode to local
 # code is bad
 Various gripes i have with this code
@@ -26,12 +28,12 @@ Currently it is annoying to switch the ordering of postprocessing effects as you
 ## variables always start at minimal
 Clamped variables are always set to their minimal values because otherwise they break
 ## general unclean code
-1. shader files in the main folder while they should be in the colorblind folder
-2. effects being called variables in volumes
+1. ``shader files in the main folder while they should be in the colorblind folder``
+2. ``effects being called variables in volumes``
 3. gooch shading not working yet (if it all possible as post processing effect)
 4. recources consisting of only materials to contain the shader
-5. creating a new thing now has every custom material as an option
-6. print statements in many materials
+5. ``creating a new thing now has every custom material as an option``
+6. ``print statements in many materials`` 
 7. Unordered effects
 8. shaders CAN be applied to scene view but you have to go into the pass and comment out a break statement, this should be a variable
 
