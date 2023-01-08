@@ -29,5 +29,7 @@ Clamped variables are always set to their minimal values because otherwise they 
 1. shader files in the main folder while they should be in the colorblind folder
 2. effects being called variables in volumes
 3. gooch shading not working yet (if it all possible as post processing effect)
+4. recources consisting of only materials to contain the shader
+5. creating a new thing now has every custom material as an option
 
 
