@@ -3,11 +3,12 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-[Serializable, VolumeComponentMenuForRenderPipeline("Custom/Sharpness", typeof(UniversalRenderPipeline))]
-public class SharpnessVariables : VolumeComponent, IPostProcessComponent
+[Serializable, VolumeComponentMenuForRenderPipeline("Custom/PixelArt/PixelArtFilterVariables", typeof(UniversalRenderPipeline))]
+public class PixelArtFilterVariables : VolumeComponent, IPostProcessComponent
 {
-	public ClampedFloatParameter Amount = new ClampedFloatParameter(0.0f, -10.0f, 10.0f);
-    public ClampedIntParameter Contrast = new ClampedIntParameter(0, 0,1);
+
+    public ClampedIntParameter downSamples = new ClampedIntParameter(0, 0, 8);
+	
     public BoolParameter Activation = new BoolParameter(value: false, overrideState: true);
     // Tells when our effect should be rendered
     public bool IsActive() => Activation.value;

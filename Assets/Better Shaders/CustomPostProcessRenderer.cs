@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CustomPostProcessRenderer : ScriptableRendererFeature
 {
-    CustomPostProcessPass pass;
+    DoGPass pass;
     EDOGPass pass2;
     GoochPass pass3;
     DitheringPass pass4;
@@ -28,7 +28,7 @@ public class CustomPostProcessRenderer : ScriptableRendererFeature
     ToneMappingPass pass21;
     public override void Create()
     {
-        pass = new CustomPostProcessPass();
+        pass = new DoGPass();
         pass2 = new EDOGPass();
         pass3 = new GoochPass();
         pass4 = new DitheringPass();

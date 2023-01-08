@@ -3,11 +3,12 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-[Serializable, VolumeComponentMenuForRenderPipeline("Custom/Sharpness", typeof(UniversalRenderPipeline))]
-public class SharpnessVariables : VolumeComponent, IPostProcessComponent
+[Serializable, VolumeComponentMenuForRenderPipeline("Custom/ColorCorrection/Gamma", typeof(UniversalRenderPipeline))]
+public class GammaVariables : VolumeComponent, IPostProcessComponent
 {
-	public ClampedFloatParameter Amount = new ClampedFloatParameter(0.0f, -10.0f, 10.0f);
-    public ClampedIntParameter Contrast = new ClampedIntParameter(0, 0,1);
+
+    public ClampedFloatParameter gamma = new ClampedFloatParameter(value: 0.0f, min: 0.0f, max: 10.0f, overrideState: true);
+	
     public BoolParameter Activation = new BoolParameter(value: false, overrideState: true);
     // Tells when our effect should be rendered
     public bool IsActive() => Activation.value;

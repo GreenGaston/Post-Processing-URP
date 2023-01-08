@@ -1,15 +1,15 @@
 using UnityEngine;
 
-//[System.Serializable, CreateAssetMenu(fileName = "ContrastSharpnessMaterials", menuName = "ContrastSharpnessMaterials")]
-public class ContrastSharpnessMaterials : UnityEngine.ScriptableObject
+//[System.Serializable, CreateAssetMenu(fileName = "GeneralizedKuwaharaMaterials", menuName = "GeneralizedKuwaharaMaterials")]
+public class GeneralizedKuwaharaMaterials : UnityEngine.ScriptableObject
 {
     //---Your Materials---
     public Material customEffect;
     
     //---Accessing the data from the Pass---
-    static ContrastSharpnessMaterials _instance;
+    static GeneralizedKuwaharaMaterials _instance;
 
-    public static ContrastSharpnessMaterials Instance
+    public static GeneralizedKuwaharaMaterials Instance
     {
         get
         {
@@ -18,14 +18,14 @@ public class ContrastSharpnessMaterials : UnityEngine.ScriptableObject
             // and avoid loading if that is the case
 
             //get the material called "DoG" from the resources folder
-            Material customEffect = Resources.Load<Material>("ContrastSharpness");
+            Material customEffect = Resources.Load<Material>("GeneralizedKuwahara");
             if (customEffect == null)
             {
                 Debug.Log("FUCK");
                 return null;
             }
             //convert the material to a CustomPostProcessingMaterials
-            _instance = CreateInstance<ContrastSharpnessMaterials>();
+            _instance = CreateInstance<GeneralizedKuwaharaMaterials>();
 
             //set the material to the instance
             _instance.customEffect = customEffect;
@@ -37,7 +37,7 @@ public class ContrastSharpnessMaterials : UnityEngine.ScriptableObject
         }
     }
 
-    public ContrastSharpnessMaterials(Material customEffect)
+    public GeneralizedKuwaharaMaterials(Material customEffect)
     {
         this.customEffect = customEffect;
     }

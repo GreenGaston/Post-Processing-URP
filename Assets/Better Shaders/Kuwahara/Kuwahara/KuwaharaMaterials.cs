@@ -1,15 +1,15 @@
 using UnityEngine;
 
-//[System.Serializable, CreateAssetMenu(fileName = "ZoomMaterials", menuName = "ZoomMaterials")]
-public class ZoomMaterials : UnityEngine.ScriptableObject
+//[System.Serializable, CreateAssetMenu(fileName = "KuwaharaMaterials", menuName = "KuwaharaMaterials")]
+public class KuwaharaMaterials : UnityEngine.ScriptableObject
 {
     //---Your Materials---
     public Material customEffect;
     
     //---Accessing the data from the Pass---
-    static ZoomMaterials _instance;
+    static KuwaharaMaterials _instance;
 
-    public static ZoomMaterials Instance
+    public static KuwaharaMaterials Instance
     {
         get
         {
@@ -18,10 +18,10 @@ public class ZoomMaterials : UnityEngine.ScriptableObject
             // and avoid loading if that is the case
 
             //get the material called "DoG" from the resources folder
-            Material customEffect = Resources.Load<Material>("Zoom");
-     
+            Material customEffect = Resources.Load<Material>("Kuwahara");
+
             //convert the material to a CustomPostProcessingMaterials
-            _instance = CreateInstance<ZoomMaterials>();
+            _instance = CreateInstance<KuwaharaMaterials>();
 
             //set the material to the instance
             _instance.customEffect = customEffect;
@@ -31,7 +31,7 @@ public class ZoomMaterials : UnityEngine.ScriptableObject
         }
     }
 
-    public ZoomMaterials(Material customEffect)
+    public KuwaharaMaterials(Material customEffect)
     {
         this.customEffect = customEffect;
     }

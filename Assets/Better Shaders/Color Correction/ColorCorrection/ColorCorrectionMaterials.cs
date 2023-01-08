@@ -1,15 +1,15 @@
 using UnityEngine;
 
-//[System.Serializable, CreateAssetMenu(fileName = "ZoomMaterials", menuName = "ZoomMaterials")]
-public class ZoomMaterials : UnityEngine.ScriptableObject
+//[System.Serializable, CreateAssetMenu(fileName = "ColorCorrectionMaterial", menuName = "ColorCorrectionMaterial")]
+public class ColorCorrectionMaterial : UnityEngine.ScriptableObject
 {
     //---Your Materials---
     public Material customEffect;
     
     //---Accessing the data from the Pass---
-    static ZoomMaterials _instance;
+    static ColorCorrectionMaterial _instance;
 
-    public static ZoomMaterials Instance
+    public static ColorCorrectionMaterial Instance
     {
         get
         {
@@ -18,10 +18,10 @@ public class ZoomMaterials : UnityEngine.ScriptableObject
             // and avoid loading if that is the case
 
             //get the material called "DoG" from the resources folder
-            Material customEffect = Resources.Load<Material>("Zoom");
-     
+            Material customEffect = Resources.Load<Material>("ColorCorrection");
+ 
             //convert the material to a CustomPostProcessingMaterials
-            _instance = CreateInstance<ZoomMaterials>();
+            _instance = CreateInstance<ColorCorrectionMaterial>();
 
             //set the material to the instance
             _instance.customEffect = customEffect;
@@ -31,7 +31,7 @@ public class ZoomMaterials : UnityEngine.ScriptableObject
         }
     }
 
-    public ZoomMaterials(Material customEffect)
+    public ColorCorrectionMaterial(Material customEffect)
     {
         this.customEffect = customEffect;
     }
