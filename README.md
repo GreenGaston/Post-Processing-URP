@@ -28,12 +28,12 @@ Currently it is annoying to switch the ordering of postprocessing effects as you
 ## variables always start at minimal
 Clamped variables are always set to their minimal values because otherwise they break
 ## general unclean code
-1. ~~shader files in the main folder while they should be in the colorblind folder
-2. ~~effects being called variables in volumes
+1. ~~shader files in the main folder while they should be in the colorblind folder~~
+2. ~~effects being called variables in volumes~~
 3. gooch shading not working yet (if it all possible as post processing effect)
 4. recources consisting of only materials to contain the shader
-5. ~~creating a new thing now has every custom material as an option
-6. ~~print statements in many materials
+5. ~~creating a new thing now has every custom material as an option~~
+6. ~~print statements in many materials~~
 7. Unordered effects
 8. shaders CAN be applied to scene view but you have to go into the pass and comment out a break statement, this should be a variable
 
