@@ -34,7 +34,7 @@ Clamped variables are always set to their minimal values because otherwise they 
 4. recources consisting of only materials to contain the shader
 5. ~~creating a new thing now has every custom material as an option~~
 6. ~~print statements in many materials~~
-7. Unordered effects
+7. ~~Unordered effects~~
 8. shaders CAN be applied to scene view but you have to go into the pass and comment out a break statement, this should be a variable
 
 
