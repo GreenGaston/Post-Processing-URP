@@ -9,7 +9,7 @@ I used this guide:https://www.febucci.com/2022/05/custom-post-processing-in-urp/
 
 # How to use
 
-The unity scenario is a standerd first person Scene from unity. all added Files are in the "Better Shaders" folder
+The base project is the unity first person package, when you open the project please go to scenes and open the playground scenario. All added Files are in the "Better Shaders" folder
 There is a Volume in the scene called Global Volume, When clicked you can Add overides in the inspecter. you will have 2 branches: "Custom" and "Post-Processing" Custom contains the shaders from Acerola and post-processing will contain the default post-processing effects provided by unity
 
 currently it is set as a Global volume but you can make it a localised effect by setting its mode to local
