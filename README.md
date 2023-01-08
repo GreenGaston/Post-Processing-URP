@@ -3,7 +3,7 @@
 This repository contains post processing effects implemented in the Universal Rendering Pipeline in unity
 
 All of the post processing effects were made by Acerola in the following repository:https://github.com/GarrettGunnell/Post-Processing
-you should visit this link for a overview of all the effects, his disclaimer applies to this repository too.
+you should visit this link for a overview of all the effects, his disclaimer applies to this repository too. he bassicaly deserves all credit i only adapted his code to work in urp
 
 I used this guide:https://www.febucci.com/2022/05/custom-post-processing-in-urp/ to implement the effects in urp
 
