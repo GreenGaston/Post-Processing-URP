@@ -18,7 +18,7 @@ public class DitheringVariables: VolumeComponent, IPostProcessComponent
 
     public ClampedIntParameter bayerLevel = new ClampedIntParameter(value: 0, min: 0, max: 2, overrideState: true);
 
-    public ClampedIntParameter downSamples = new ClampedIntParameter(value: 0, min: 0, max: 8, overrideState: true);
+    public ClampedIntParameter downSamples = new ClampedIntParameter(value: 1, min: 1, max: 8, overrideState: true);
 
     public BoolParameter pointFilterDown = new BoolParameter(value: false, overrideState: true);
 

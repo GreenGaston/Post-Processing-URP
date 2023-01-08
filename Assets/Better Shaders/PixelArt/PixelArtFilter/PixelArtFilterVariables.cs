@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 public class PixelArtFilterVariables : VolumeComponent, IPostProcessComponent
 {
 
-    public ClampedIntParameter downSamples = new ClampedIntParameter(0, 0, 8);
+    public ClampedIntParameter downSamples = new ClampedIntParameter(1,1, 8);
 	
     public BoolParameter Activation = new BoolParameter(value: false, overrideState: true);
     // Tells when our effect should be rendered
